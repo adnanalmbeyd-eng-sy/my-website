@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>دليل</title>
+    <script>
+        document.documentElement.setAttribute("data-theme", localStorage.getItem("site-theme") || "dark");
+    </script>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- ملف التنسيقات -->
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+
+    <!-- رأس الصفحة -->
+    <header class="bg-dark text-white p-3">
+        <div class="container d-flex justify-content-between align-items-center flex-wrap">
+            <h1 class="logo m-0" data-key="site.title">دليل فعاليات المدينة</h1>
+
+            <nav>
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="index.html" data-key="nav.home">الرئيسية</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="events.html" data-key="nav.events">الفعاليات</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="about.html" data-key="nav.guide">الدليل</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="contact.html" data-key="nav.contact">اتصل بنا</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Language Flags -->
+            <div class="d-flex align-items-center gap-2">
+                <img src="img/عربي.PNG" alt="Arabic" class="flag" id="arabicBtn" width="30" height="20" style="cursor:pointer" />
+                <img src="img/انجليزي.PNG" alt="English" class="flag" id="englishBtn" width="30" height="20" style="cursor:pointer" />
+                <button id="themeToggle" class="theme-toggle" type="button" aria-label="تبديل الوضع">
+  🌙
+</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- محتوى الصفحة -->
+    <main class="container mt-5 text-white">
+        <h2 class="text-warning mb-4">عن دليل فعاليات المدينة</h2>
+
+        <section class="mb-5">
+            <h4 class="text-info">🎯 الهدف من المشروع</h4>
+            <p>
+                يهدف هذا الموقع إلى تسهيل الوصول إلى الفعاليات الثقافية، الفنية، الرياضية والعائلية في المدينة، من خلال واجهة بسيطة وسريعة تتيح للمستخدمين تصفح الفعاليات حسب التصنيف، ومعرفة التفاصيل والموقع والتاريخ.
+            </p>
+        </section>
+
+        <section class="mb-5">
+            <h4 class="text-info">🧠 المهارات والتقنيات المستخدمة</h4>
+            <ul>
+                <li>HTML و CSS لتصميم الصفحات وتنسيقها</li>
+                <li>Bootstrap لتسهيل التصميم المتجاوب</li>
+                <li>JavaScript لعرض تفاصيل الفعاليات ديناميكيًا</li>
+                <li>تنظيم الصور والروابط وفق هيكل ملفات واضح</li>
+            </ul>
+        </section>
+
+        <section class="mb-5">
+            <h4 class="text-info">👨‍💻 من نحن</h4>
+            <p>
+                تم تطوير هذا المشروع من قبل مطور شغوف بتجربة المستخدم وتقديم حلول بسيطة وفعالة. يركز على بناء واجهات جذابة، وربط الأحداث بالتفاصيل بطريقة ديناميكية، مع الحرص على الأداء والتناسق.
+            </p>
+        </section>
+
+        <section class="mb-5">
+            <h4 class="text-info">📁 ملاحظات ملف الوظيفة</h4>
+            <p>
+                تم الالتزام بجميع المعايير المطلوبة، بما في ذلك:
+            </p>
+            <ul>
+                <li>تنسيق الصفحات بشكل متناسق مع الخلفية الداكنة</li>
+                <li>استخدام تصنيفات واضحة لكل فعالية</li>
+                <li>ربط صفحة التفاصيل ديناميكيًا باستخدام JavaScript</li>
+                <li>تصميم متجاوب يعمل على جميع الأجهزة</li>
+            </ul>
+        </section>
+
+        <a href="index.html" class="btn btn-outline-warning">← العودة إلى الصفحة الرئيسية</a>
+    </main>
+
+    <!-- ✅ التذييل -->
+    <footer class="bg-dark text-white text-center p-4 mt-5">
+        <p>© 2025 دليل فعاليات المدينة | للتواصل: cityevents@example.com</p>
+        <div>
+            <a href="#" class="text-white me-2">فيسبوك</a>
+            <a href="#" class="text-white">إنستغرام</a>
+        </div>
+        <a href="#" class="d-block mt-2 text-warning">سياسة الخصوصية</a>
+    </footer>
+    <button id="toTop" class="btn btn-warning btn-lg rounded-circle" title="للأعلى" style="position: fixed; bottom: 30px; left: 30px; display: none;">↑</button>
+
+
+
+    <!-- ✅ ملفات JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/lang/language-about.js"></script>
+
+</body>
+
+</html>
