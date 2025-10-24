@@ -1,6 +1,3 @@
-// lang.js
-// ===== Simple i18n engine (no frameworks) =====
-
 const translations = {
     en: {
         // Site / Nav
@@ -80,7 +77,7 @@ const translations = {
 
 const DEFAULT_LANG = "en";
 
-// Set <html lang> and direction
+// <html lang> & direction
 function applyLangMeta(lang) {
     const isRTL = lang === "ar";
     document.documentElement.lang = lang;
@@ -88,7 +85,7 @@ function applyLangMeta(lang) {
     document.documentElement.dataset.lang = lang;
 }
 
-// Translate [data-key] elements + team section
+// ترجمة العناصر التي تحتوي على السمة [data-key]
 function translatePage(lang) {
     const dict = translations[lang] || translations[DEFAULT_LANG];
 
@@ -108,7 +105,7 @@ function translatePage(lang) {
         }
     });
 
-    // Update page title
+    // تعديل page title
     if (dict["page.index.title"]) document.title = dict["page.index.title"];
 
     // 🟡 Team section translation
@@ -139,13 +136,13 @@ function setLanguage(lang) {
     translatePage(lang);
 }
 
-// Init
+
 document.addEventListener("DOMContentLoaded", () => {
     const saved = localStorage.getItem("lang") || DEFAULT_LANG;
     applyLangMeta(saved);
     translatePage(saved);
 
-    // Flag buttons
+    // ازرار الاعلام
     const ar = document.getElementById("arabicBtn");
     const en = document.getElementById("englishBtn");
     if (ar) ar.addEventListener("click", () => setLanguage("ar"));

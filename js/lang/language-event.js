@@ -116,9 +116,7 @@
         }
     };
 
-    // ---------------------------------
-    // Event Content (both languages)
-    // ---------------------------------
+
     const events = {
         ar: {
             ramadan: {
@@ -247,9 +245,7 @@
         }
     };
 
-    // -------------------------
-    // Core i18n engine
-    // -------------------------
+
     const DEFAULT_LANG = "ar";
 
     function applyLangMeta(lang) {
@@ -259,7 +255,7 @@
         document.documentElement.dataset.lang = lang;
     }
 
-    // Translate elements with [data-key]; supports attributes via data-attr="alt,placeholder,title"
+    // ترجمة العناصر التي تحتوي على السمة [data-key]؛ مع دعم ترجمة السمات عبر data-attr="alt,placeholder,title"
     function translateStatic(lang) {
         const dict = t[lang] || t[DEFAULT_LANG];
 
@@ -280,7 +276,7 @@
             }
         });
 
-        // Update <title> if it uses a key
+        // Update title if it uses a key
         const titleEl = document.querySelector("title[data-key]");
         if (titleEl) {
             const k = titleEl.getAttribute("data-key");
